@@ -171,6 +171,13 @@ else {						# generate a file query
 }
 
 print <<EOT;
+<script src="strftime-min.js" ></script>
+<script>
+(function() {   // function gets invoked after page has been loaded
+	var currentTime = new Date();
+	document.getElementById('localtime').innerHTML = currentTime.strftime('%H:%M %p');
+})();
+</script>
 </body>
 </html>
 EOT
@@ -1816,10 +1823,17 @@ sub graphIt
 		$GLOBAL_START = $start;
 #		$GLOBAL_FIRSTGRAPH = 0;
 
-		print "Graphs begin at " . scalar localtime($start) . "<p><center>\n"
-			if (($GLOBAL_GRAPH) && (! $quiet));
+		# print "Graphs begin at " . scalar localtime($start) . "<p><center>\n"
+		# 	if (($GLOBAL_GRAPH) && (! $quiet));
 
-		&graphRecursively(0, $file, $graphvar, $start, \@separate, \@combine, \@datapoints, $step);
+    print  "<p><center>\n"
+    	. "<div class='timeheading'>"
+    	. "<span style='float:left'>Graphs begin at " . scalar localtime($start) . "</span>" 
+    	. "<span style='float:right'>Current Time: <span id='localtime'></span></span>"
+    	. "</div>"		
+                if (($GLOBAL_GRAPH) && (! $quiet));
+
+    	&graphRecursively(0, $file, $graphvar, $start, \@separate, \@combine, \@datapoints, $step);
 		print "</center>\n" if ($GLOBAL_GRAPH);
 
 		$start -= $period;
