@@ -118,7 +118,7 @@ open my $fh, '<', $filename or die "error opening $filename: $!";
 my $data = do { local $/; <$fh> };
 print $data;
 
-print "<h2>Webview Netflow Reporter</h2>" if (! $quiet);
+# print "<h2>Webview Netflow Reporter</h2>" if (! $quiet);
 
 if (($debug) && (0)) {
 	foreach (param()) {

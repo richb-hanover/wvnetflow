@@ -37,8 +37,8 @@ open my $fh, '<', $filename or die "error opening $filename: $!";
 my $data = do { local $/; <$fh> };
 print $data;
 
-print button(-name=>'Refresh', -onClick=>'window.location.reload()'), ' &nbsp; ',
-	button(-name=>'Home', -onClick=>"window.location=\"$rootDirURL\""), p;
+# print button(-name=>'Refresh', -onClick=>'window.location.reload()'), ' &nbsp; ',
+# 	button(-name=>'Home', -onClick=>"window.location=\"$rootDirURL\""), p;
 
 my $start2read = {};
 

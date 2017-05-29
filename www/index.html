@@ -6,7 +6,33 @@
  </head>
  <body bgcolor="#FFFFFF" text="#000000">
 
-<h2>Webview Netflow Reporter</h2>
+<!-- 
+Header file for the top of each page. 
+Has a little styling, then the html of the navigation
+-->
+<style>
+    body {font-family: Helvetica, Arial, Sans-Serif;}
+    #nav {
+        width: 100%;
+        background: #2196f3;
+        color: white;
+        font-size: 24px;
+        padding: 5px;
+     }
+    #nav a {
+        color: white;
+        font-size: 16px;
+    }
+</style>
+
+<div id="nav" style="width=100%; background: #2196f3; color: white; ">
+    <b>Webview Netflow Reporter</b>
+    <a href="./render.cgi">Analysis</a>
+    <a href="./adhoc.cgi">Ad Hoc Query</a>
+    <a href="./configdump.cgi">Configuration</a>
+    <a href="./exporter.cgi">Exporters</a>
+    <a href="./weblog.cgi">Status</a>
+</div>
 
 <table>
 
