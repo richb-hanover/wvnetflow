@@ -848,8 +848,8 @@ sub showForm
 						),
 
 						table( {-border=>0},
-							Tr( td({-align=>'right'}, 'start:'), td( textfield(-name=>'time1', -size=>14, -id=>'cal1') ) ),
-							Tr( td({-align=>'right'}, 'end:'), td( textfield(-name=>'time2', -size=>14, -id=>'cal2') ) ),
+							Tr( td({-align=>'right'}, 'start:'), td( textfield(-name=>'time1', -size=>17, -id=>'cal1') ) ),
+							Tr( td({-align=>'right'}, 'end:'), td( textfield(-name=>'time2', -size=>17, -id=>'cal2') ) ),
 						),
 					)
 				),
