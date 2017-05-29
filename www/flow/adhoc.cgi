@@ -473,6 +473,12 @@ print header(),
 #		-onLoad=>$onLoad,
 	);
 
+# Print the header for the page
+my $filename = 'header.html';
+open my $fh, '<', $filename or die "error opening $filename: $!";
+my $data = do { local $/; <$fh> };
+print $data;
+
 #foreach (param()) {
 #	print "$_: " . join(', ', param($_)) . "<br>\n";
 #}

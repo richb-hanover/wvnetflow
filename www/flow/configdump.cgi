@@ -16,6 +16,12 @@ if ($configFile =~ /(.*)\/([^\/]+)$/) {
 print header,
         start_html($file);
 
+# Print the header for the page
+my $filename = 'header.html';
+open my $fh, '<', $filename or die "error opening $filename: $!";
+my $data = do { local $/; <$fh> };
+print $data;
+
 our $count = 0;
 push(@files, $file);
 

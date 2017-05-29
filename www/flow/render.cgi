@@ -111,6 +111,13 @@ print <<EOT;
 </head>
 <body>
 EOT
+
+# Print the header for the page
+my $filename = 'header.html';
+open my $fh, '<', $filename or die "error opening $filename: $!";
+my $data = do { local $/; <$fh> };
+print $data;
+
 print "<h2>Webview Netflow Reporter</h2>" if (! $quiet);
 
 if (($debug) && (0)) {

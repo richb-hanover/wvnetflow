@@ -54,9 +54,15 @@ EOT
 		start_html( {
 			-title=>$title,
 			-style=>{-code=>$STYLE},
-		}),
+		});
 
-		h3($title),
+# Print the header for the page
+my $filename = 'header.html';
+open my $fh, '<', $filename or die "error opening $filename: $!";
+my $data = do { local $/; <$fh> };
+print $data;
+
+		print h3($title),
 
 		table({-border=>1, -cellpadding=>3, -cellspacing=>0},
 
