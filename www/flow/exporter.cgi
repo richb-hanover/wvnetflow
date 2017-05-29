@@ -110,8 +110,15 @@ EOT
 			-style => [
 				{ -code => $STYLE },
 			],
-		),
-		h1($title);
+		);
+
+# Print the header for the page
+my $filename = 'header.html';
+open my $fh, '<', $filename or die "error opening $filename: $!";
+my $data = do { local $/; <$fh> };
+print $data;
+
+	print h1($title);
 
 	my $sort = param('sort') || 'name';
 	Delete('sort');
