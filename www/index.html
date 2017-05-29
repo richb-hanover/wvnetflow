@@ -10,29 +10,17 @@
 Header file for the top of each page. 
 Has a little styling, then the html of the navigation
 -->
-<style>
-    body {font-family: Sans-Serif;}
-    #nav {
-        width: 100%;
-        background: #2196f3;
-        color: white;
-        font-size: 24px;
-        padding: 5px;
-     }
-    #nav a {
-        color: white;
-        font-size: 16px;
-    }
-</style>
+<link rel="stylesheet" href="./flow/header.css">
 
-<div id="nav" style="width=100%; background: #2196f3; color: white; ">
-    <b>Webview Netflow Reporter</b>
-    <a href="./flow/render.cgi">Analysis</a>
-    <a href="./flow/adhoc.cgi">Ad Hoc Query</a>
-    <a href="./flow/configdump.cgi">Configuration</a>
-    <a href="./flow/exporter.cgi">Exporters</a>
-    <a href="./flow/weblog.cgi">Status</a>
+<div id="nav">
+    <a href="."                     class="homelink">Webview Netflow Reporter</a>
+    <a href="./flow/render.cgi"     class="navlink">Analysis</a>
+    <a href="./flow/adhoc.cgi"      class="navlink">Ad Hoc Query</a>
+    <a href="./flow/configdump.cgi" class="navlink">Configuration</a>
+    <a href="./flow/exporter.cgi"   class="navlink">Exporters</a>
+    <a href="./flow/weblog.cgi"     class="navlink">Status</a>
 </div>
+<div style="height: 30px;"></div>
 
 <table>
 

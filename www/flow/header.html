@@ -1,27 +1,17 @@
-<!-- 
-Header file for the top of each page. 
+<!--
+Header file for the top of each page.
 Has a little styling, then the html of the navigation
 -->
-<style>
-    body {font-family: Sans-Serif;}
-    #nav {
-        width: 100%;
-        background: #2196f3;
-        color: white;
-        font-size: 24px;
-        padding: 5px;
-     }
-    #nav a {
-        color: white;
-        font-size: 16px;
-    }
-</style>
+<link rel="stylesheet" href="./header.css">
 
-<div id="nav" style="width=100%; background: #2196f3; color: white; ">
-    <b>Webview Netflow Reporter</b>
-    <a href="./render.cgi">Analysis</a>
-    <a href="./adhoc.cgi">Ad Hoc Query</a>
-    <a href="./configdump.cgi">Configuration</a>
-    <a href="./exporter.cgi">Exporters</a>
-    <a href="./weblog.cgi">Status</a>
+<!-- starting html -->
+<div id="nav" >
+    <a href="../index.html"    class="homelink">Webview Netflow Reporter</a>
+    <a href="./render.cgi"     class="navlink">Analysis</a>
+    <a href="./adhoc.cgi"      class="navlink">Ad Hoc Query</a>
+    <a href="./configdump.cgi" class="navlink">Configuration</a>
+    <a href="./exporter.cgi"   class="navlink">Exporters</a>
+    <a href="./weblog.cgi"     class="navlink">Status</a>
 </div>
+<div style="height: 30px;"></div>
+<!-- End of Header -->
