@@ -758,7 +758,7 @@ sub queryGraph
 		popup_menu(-name=>'palette',
 			-values=>\@palettes),
 
-		$spacer, "<b style=\"background-color:$bg\">&nbsp; Tabe Format:&nbsp;</b> ",
+		$spacer, "<b style=\"background-color:$bg\">&nbsp; Table Format:&nbsp;</b> ",
 		popup_menu(-name=>'output',
 			-values=>['web', 'csv']),
 
